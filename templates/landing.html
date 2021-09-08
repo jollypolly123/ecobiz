@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Your Time | Responder</title>
+{% endblock %}
+
+{% block body %}
+
+<!-- Main -->
+<div id="main">
+
+	<!-- One -->
+		<section id="one">
+			<div class="inner">
+				{% if not go_home %}
+					<header class="major">
+						<h2>Your emergency response time is {{ time }}.</h2>
+					</header>
+					<p>The closest emergency center is {{ destination }}. You are {{ distance }} away.</p>
+				{% else %}
+					<header class="major">
+						<h2>Find the closest emergency center to you:</h2>
+					</header>
+				{% endif %}
+			</div>
+		</section>
+
+	<!-- Two -->
+		<section id="two" class="spotlights">
+			<section>
+				{% if not go_home %}
+				<div style="float: left;">
+					<iframe
+						width="600" height="455"
+						loading="lazy" allowfullscreen
+						src="{{ src }}">
+					</iframe>
+				</div>
+				{% else %}
+				<div style="float: left;">
+					<div style=" height:450px; width:600px; padding-top:105px; padding-left:140px;">
+						Enter an address to see what route the emergency responders will take to get to your location.
+					</div>
+				</div>
+				{% endif %}
+				<div class="content">
+					<div class="inner">
+						<header class="major">
+							<h3>Emergency Services Near You</h3>
+							<form action="/" method="POST">
+								<div class="field half">
+									<label for="address">Type in your address to locate emergency services near you</label>
+									<div class="input address-box" style="margin-right: 20px;">
+										<input size="50" type="text" name="address" id="address" />
+									</div>
+									<div class="input"><input type="submit"
+															  class="address-button"
+															  value="Let's Go!" /></div>
+								</div>
+								<div>{{ error_msg }}</div>
+								<div style="padding-top: 10px">
+									<p>You can also <a style="border-bottom: 2px dotted;" onclick="getLocation()">use your current location</a></p>
+								</div>
+							</form>
+						</header>
+						{% if not go_home %}
+						<p>Here is the path that the emergency responders will take to get to you. You can expect them
+							to arrive in {{ time }}. If you are assisting a senior, click the button below to see what
+							you can do to help while waiting.
+						</p>
+						{% endif %}
+						<ul class="actions">
+							<li><a href="education" class="button">What to do right now</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			{% if not go_home %}
+			<section>
+				<div style="z-index:10;height:100%; width:100%;">
+					<div id="county_container" style="width: 600px; height: 450px;"> </div>
+				</div>
+
+				<div class="content">
+					<div class="inner">
+						<header class="major">
+							<h3>County Emergency Services Information</h3>
+						</header>
+						<p>Your current location: {{ address }}</p>
+<!--						<p>Closest hospital to your current location: {{ closest_hospital }}</p>-->
+<!--						<p>Closest fire department to your current location: {{ closest_station }} </p>-->
+<!--						<h5>This is dummy text</h5>-->
+<!--						<p>If it is an urgent emergency, make sure to call 911</p>-->
+						<h5>Machine learning generated results</h5>
+						{% if predicted_county_time == 0 %}
+						<p>{{ addr_county }} average response time is unavailable.</p>
+						{% else %}
+						<p>{{ addr_county }} average response time: {{ predicted_county_time }} minutes</p>
+						{% endif %}
+						<ul class="actions">
+							<li><a href="education" class="button">What to do right now</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</section>
+
+	{% endif %}
+
+</div>
+{% if not go_home %}
+<script type="text/javascript">
+	function initialize_map() {
+        var mapDiv = document.getElementById('county_container');
+        var map = new google.maps.Map(mapDiv, {
+            center: {lat: {{map_center[0]}}, lng: {{map_center[1]}}},
+            zoom: 10
+        });
+        var markerlocations = {{markers|tojson}};
+        console.log(markerlocations);
+
+		for(i = 0;  i < markerlocations.length; i++) {
+			var marker = new google.maps.Marker({
+					position: new google.maps.LatLng(markerlocations[i][0], markerlocations[i][1]),
+					map: map,
+					icon:  markerlocations[i][3]
+			});
+			var address = '<div><p><b>Marker Locations</b></p></div>';
+			var infowindow = new google.maps.InfoWindow({
+			  content: address
+			});
+			marker.addListener('click', function() {
+			  infowindow.open(map, marker);
+			});
+		}
+    }
+</script>
+<script src="{{ script_src }}" async defer>
+</script>
+{% endif %}
+
+<script>
+	function getLocation() {
+	  if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(passPosition);
+	  } else {
+	  }
+	}
+
+	function passPosition(position) {
+		var dat = [position.coords.latitude, position.coords.longitude];
+
+		$.ajax({
+			type: 'POST',
+			url: "/services",
+			data: JSON.stringify(dat),
+			contentType: 'application/json;charset=UTF-8',
+			success: function(data){
+				window.location.href = "/services?" + data.address;
+			}
+		});
+	}
+</script>
+{% endblock %}
