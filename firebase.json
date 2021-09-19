@@ -1,0 +1,21 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "hosting": {
+    "public": "static",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [{
+      "source": "**",
+      "run": {
+        "serviceId": "ecobiz",
+        "region": "northamerica-northeast1"
+      }
+    }]
+  }
+}

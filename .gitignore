@@ -18,6 +18,8 @@ _mailinglist
 .idea/
 docs/_build/
 .vscode
+ecobiz-com-service.json
+key.json
 
 # Coverage reports
 htmlcov/

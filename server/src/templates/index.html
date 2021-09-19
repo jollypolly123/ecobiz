@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <section id="landing">
+      <div class="container">
+        <h1>The eco-friendly way to <br> monetize your passions.</h1>
+        <p>Join a network of freelancers and businesses saving <br> the planet, one sustainable service at a time.</p>
+        <form>
+          <button formaction="#eco-freelancers" class="button button1">For Eco-Freelancers</button>
+          <button formaction="#eco-businesses" class=" button button2">For Eco-Businesses</button>
+        </form>
+        <img src="/images/LandingPageImage.png" id="landingpageimage" align="right">
+
+
+      </div>
+    </section>
+    
+    
+    <section id="eco-freelancers">
+      <div class="container">
+
+        <h1 id="ecofreelancers">For Eco-Freelancers</h1>
+        <p>At ECOBIZ, we believe that connecting green <br> changemakers with green companies will <br> lead to a more sustainable future for all. 
+        <br>
+        <br>
+        Make a change by promoting your services <br> or applying to jobs today!</p>
+        <form>
+          <button formaction="/directory" class="button button3">Promote your services</button>
+          <button formaction="/jobs" class=" button button4">Apply for jobs</button>
+        </form>
+        <img src="/images/ecofreelancerslanding.png" id="ecofreelancerslanding" align="right">
+      </div>
+    </section>
+   
+
+    <section id="eco-businesses">
+      <div class="container">
+        <h1 id="ecobusinesses">For Eco-Businesses</h1>
+        <p>At ECOBIZ, we believe that connecting green <br> changemakers with green companies will <br> lead to a more sustainable future for all. 
+        <br>
+        <br>
+        Make a change by posting a job listing or<br> hiring a freelancer today!</p>
+        <form>
+          <button formaction="/jobs" class="button button5">Post a job listing</button>
+          <button formaction="/directory" class=" button button6">Hire a freelancer</button>
+        </form>
+        <img src="/images/ecobusinesseslanding.png" id="ecobusinesseslanding" align="right">
+      </div>
+    </section>
+
+    <section id="featured-resources">
+      <div class="container">
+      <h2 id="featuredresources">Featured Resources</h2>
+      <br/>
+      <a href="https://www.sba.gov/business-guide/manage-your-business/manage-your-finances">
+      <div class="box-7">
+        <br>
+        <img src="/images/SBAlogo.png" id="sbalogo">
+        <br>
+        </div>
+        </a>
+
+
+         <a href="https://www.epa.gov/energy/clean-energy-programs">
+        <div class="box-8">
+          <br>
+          <br>
+          <img src="/images/USEPAlogo.png" id="usepalogo">
+          <br>
+          <br>
+        </div>
+        </a>
+
+        <a href="https://inhabitat.com/page/3/">
+        <div class="box-9">
+          <br>
+          <br>
+          <img src="/images/InhabitatLogo.png" id="inhabitatlogo">
+          <br>
+          <br>
+        </div>
+        </a>
+        
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      
+      
+      <div class="buttonresources">
+      <form>
+          <button formaction="/resources" class="button button7">View all resources</button>
+      </form> 
+      </div>
+     
+    </div>
+    </section>
+{% endblock %}

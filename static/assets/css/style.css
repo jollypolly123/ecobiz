@@ -1,0 +1,845 @@
+*, body {
+  font-family: 'Poppins', sans-serif;
+  color: #48946D;
+  background: #F2F9F1;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+.ecobiz-logo img {
+  float: left;
+  height: auto;
+  width: 100px;
+  margin-top: 16px;
+  margin-left: 40px;
+}
+/* ~~ Top Navigation Bar for all pages ~~ */
+
+#navigation-container {
+  width: 1200px;
+  margin: 0 auto;
+  height: 70px;
+  position: absolute;
+  right: 40px;
+}
+
+.navigation-bar {
+  background-color: #F2F9F1;
+  height: 70px;
+  width: 100%;
+  text-align:right;
+}
+.navigation-bar img{
+float:left;
+}
+.navigation-bar ul {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  display:inline-block;
+  vertical-align:top;
+}
+
+.navigation-bar li {
+  list-style-type: none;
+  padding: 0px;
+  height: 24px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  display: inline;
+}
+
+.navigation-bar li a {
+  color: #48946D;;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  line-height: 70px;
+  padding: 5px 15px;
+  opacity: 0.7;
+}
+
+#menu {
+  float: right;
+}
+
+/* Home Page */
+.flexbox {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px -10px;
+}
+
+.item {
+  box-sizing: border-box;
+  width: 20%;
+  margin-bottom: 20px;
+  padding: 0px 10px;
+}
+
+.content {
+  background-color: #F2F9F1;
+  border: 2px solid #48946D;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 10px;
+}
+
+
+#landing {
+  height:420px;
+  margin-right: 40px;
+  text-align: left;
+  padding: 110px 40px;
+  
+}
+
+#landing h1{
+  font-size: 60px;
+  margin-bottom: 0;
+}
+
+#landing p{
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+#eco-freelancers{
+  height: 600px;
+  margin-right: 40px;
+  text-align: left;
+  padding: 40px;
+}
+
+#eco-freelancers h1{
+  font-size: 60px;
+}
+
+#eco-freelancers p{
+  font-size: 30px;
+}
+
+#eco-businesses{
+  height:600px;
+  margin-right: 40px;
+  text-align: left;
+  padding: 40px;
+}
+
+#eco-businesses h1{
+  font-size: 60px;
+}
+
+#eco-businesses p{
+  font-size: 30px;
+}
+
+#featured-resources{
+  height: 660px;
+  margin-right: 40px;
+  text-align: left;
+  padding: 40px;
+}
+
+#featuredresources{
+  font-size: 60px;
+}
+
+#sbalogo{
+    display: block;
+    margin-left: 35px;
+}
+
+#usepalogo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 62%;
+}
+
+#inhabitatlogo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 62%;
+}
+
+.box-7{
+  background-color:#F2F9F1;
+  color:#fff;
+  /* same as above */
+  border: 2px #48946D solid;
+  border-radius: 10px;
+ 
+  /* same as above */
+  padding:20px;
+  width: 24%;
+
+  margin-top:50px;
+  margin:20px;
+  position:absolute;
+  top: 2280px;
+  left: 30px;
+}
+
+.box-8{
+  background-color:#F2F9F1;
+  color:#fff;
+  /* same as above */
+  border: 2px #48946D solid;
+  border-radius: 10px;
+  
+
+ 
+  /* same as above */
+  padding:20px;
+  width: 24%;
+
+  margin-top:50px;
+  margin:20px;
+  position:absolute;
+  top: 2280px;
+  left: 500px;
+}
+
+.box-9{
+  background-color:#F2F9F1;
+  color:#fff;
+  /* same as above */
+  border: 2px #48946D solid;
+  border-radius: 10px;
+ 
+  /* same as above */
+  padding:20px;
+  width: 24%;
+
+  margin-top:50px;
+  margin:20px;
+  position:absolute;
+  top: 2280px;
+  left: 970px;
+}
+
+
+/* buttons on landing page */
+button {
+  background-color: #48946D;
+  color:#F2F9F1;
+  border-radius: 20px;
+  font-size: 20px;
+  padding: 10px 25px 10px 25px;
+  border: 2px solid #48946D;
+}
+
+.button1{
+  margin-right: 20px;
+}
+
+.button1:hover {
+  background-color: #B8DBB3; /* Green */
+  color:#48946D;
+}
+
+.button2{
+  background-color:#F2F9F1;
+  color: #48946D;
+}
+
+.button2:hover {
+  background-color: #B8DBB3; /* Green */
+  color:#F2F9F1;
+}
+
+#landingpageimage  {
+  float: right;    
+  position: absolute;
+  top: 200px;
+  left: 830px;
+  width: 600px;
+}
+
+#ecofreelancerslanding  {
+  float: right;    
+  position: absolute;
+  top: 810px;
+  left: 700px;
+  width: 800px;
+}
+
+#ecobusinesseslanding{
+  float: right;    
+  position: absolute;
+  top: 1450px;
+  left: 700px;
+  width: 800px;
+}
+
+.button3{
+  margin-right: 20px;
+}
+
+.button3:hover {
+  background-color: #B8DBB3; /* Green */
+  color:#48946D;
+}
+
+.button4{
+  background-color:#F2F9F1;
+  color: #48946D;
+}
+
+.button4:hover {
+  background-color: #B8DBB3; /* Green */
+  color:#F2F9F1;
+}
+
+.button5{
+  margin-right: 20px;
+}
+
+.button5:hover {
+  background-color: #B8DBB3; /* Green */
+  color:#48946D;
+}
+
+.button6{
+  background-color:#F2F9F1;
+  color: #48946D;
+}
+
+.button6:hover {
+  background-color: #B8DBB3; /* Green */
+  color:#F2F9F1;
+}
+
+
+.button7:hover {
+  background-color: #B8DBB3; /* Green */
+  color:#48946D;
+}
+
+
+
+/* login page */
+#login{
+  padding: 100px;
+  text-align: center;
+}
+
+#login h1{
+  font-size: 60px;
+  text-align: center;
+}
+
+input[type=text], select {
+  width: 35%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+input[type=email], select {
+  width: 35%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+label{
+  font-size: 20px;
+  text-align: center;
+}
+
+
+
+/* directory */
+
+#sustainable-directory{
+  text-align: center;
+  height:420px;
+  margin-right: 40px;
+  padding: 150px 40px;
+  
+}
+
+#sustainable-directory h1{
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#sustainable-directory p{
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.button8:hover {
+  background-color: #B8DBB3; /* Green */
+  color:#48946D;
+}
+#explore-directory h2{
+  font-size: 45px;
+  text-align: center;
+}
+
+/* job board */
+
+#job-board{
+  text-align: center;
+  height:420px;
+  margin-right: 40px;
+  padding: 150px 40px;
+  
+}
+
+#job-board h1{
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#job-board p{
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.button9:hover {
+  background-color: #B8DBB3; /* Green */
+  color:#48946D;
+}
+#explore-job-board h2{
+  font-size: 45px;
+  text-align: center;
+}
+
+searchbar{
+  position: absolute;
+  left: 100px;
+  width: 200px;
+}
+
+
+
+/* promote services */
+
+#post-services{
+  padding: 10px;
+  text-align: center;
+  
+}
+
+#post-services h1{
+  font-size: 60px;
+  text-align: center;
+}
+
+#searchbar{
+  position: absolute;
+  left: 50px;
+}
+
+/* post list */
+
+#post-listing{
+  padding: 10px;
+  text-align: center;
+  
+}
+
+#post-listing h1{
+  font-size: 60px;
+  text-align: center;
+}
+
+#searchbar{
+  position: absolute;
+  left: 100px;
+  width: 75%;
+}
+
+#search-button{
+  position: absolute;
+  right: 100px;
+  top: 946px;
+}
+
+.box-1{
+  background-color:#F2F9F1;
+  color:#fff;
+  /* same as above */
+  border: 2px #48946D solid;
+  border-radius: 10px;
+  
+
+ 
+  /* same as above */
+  padding:20px;
+  width: 24%;
+
+  margin-top:50px;
+  margin:20px;
+  position:absolute;
+  top: 1020px;
+  left: 80px;
+}
+
+.box-2{
+  background-color:#F2F9F1;
+  color:#fff;
+  /* same as above */
+  border: 2px #48946D solid;
+  border-radius: 10px;
+  
+
+ 
+  /* same as above */
+  padding:20px;
+  width: 24%;
+
+  margin-top:50px;
+  margin:20px;
+  position:absolute;
+  top: 1020px;
+  left: 505px;
+}
+
+.box-3{
+  background-color:#F2F9F1;
+  color:#fff;
+  /* same as above */
+  border: 2px #48946D solid;
+  border-radius: 10px;
+ 
+  /* same as above */
+  padding:20px;
+  width: 24%;
+
+  margin-top:50px;
+  margin:20px;
+  position:absolute;
+  top: 1020px;
+  left: 925px;
+}
+
+.box-4{
+  background-color:#F2F9F1;
+  color:#fff;
+  /* same as above */
+  border: 2px #48946D solid;
+  border-radius: 10px;
+  
+
+ 
+  /* same as above */
+  padding:20px;
+  width: 24%;
+
+  margin-top:50px;
+  margin:20px;
+  position:absolute;
+  top: 1420px;
+  left: 80px;
+}
+
+.box-5{
+  background-color:#F2F9F1;
+  color:#fff;
+  /* same as above */
+  border: 2px #48946D solid;
+  border-radius: 10px;
+  
+
+ 
+  /* same as above */
+  padding:20px;
+  width: 24%;
+
+  margin-top:50px;
+  margin:20px;
+  position:absolute;
+  top: 1420px;
+  left: 505px;
+}
+
+.box-6{
+  background-color:#F2F9F1;
+  color:#fff;
+  /* same as above */
+  border: 2px #48946D solid;
+  border-radius: 10px;
+ 
+  /* same as above */
+  padding:20px;
+  width: 24%;
+
+  margin-top:50px;
+  margin:20px;
+  position:absolute;
+  top: 1420px;
+  left: 925px;
+}
+
+
+#explore-job-board{
+  height:1000px;
+  
+}
+
+#explore-directory{
+  height:1000px;
+}
+
+/* resources page */
+
+#resources-page{
+  text-align: center;
+  height:420px;
+  margin-right: 40px;
+  padding: 0px 40px;
+  
+}
+
+#resources-page h1{
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#resources-page h2{
+  font-size: 45px;
+  text-align:center;
+}
+
+#resources-page p{
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.box-10{
+  background-color:#F2F9F1;
+  color:#fff;
+  /* same as above */
+  border: 2px #48946D solid;
+  border-radius: 10px;
+ 
+  /* same as above */
+  padding:20px;
+  width: 24%;
+
+  margin-top:50px;
+  margin:20px;
+  position:absolute;
+  top: 500px;
+  left: 30px;
+}
+
+#notionlogo{
+  width: 77%;
+}
+
+.box-11{
+  background-color:#F2F9F1;
+  color:#fff;
+  /* same as above */
+  border: 2px #48946D solid;
+  border-radius: 10px;
+  
+  /* same as above */
+  padding:20px;
+  width: 24%;
+
+  margin-top:50px;
+  margin:20px;
+  position:absolute;
+  top: 500px;
+  left: 500px;
+}
+
+#asanalogo{
+  width: 90%;
+}
+
+.box-12{
+  background-color:#F2F9F1;
+  color:#fff;
+  /* same as above */
+  border: 2px #48946D solid;
+  border-radius: 10px;
+ 
+  /* same as above */
+  padding:20px;
+  width: 24%;
+
+  margin-top:50px;
+  margin:20px;
+  position:absolute;
+  top: 500px;
+  left: 970px;
+}
+
+#airtablelogo{
+  width: 77%;
+}
+
+#invoicing-and-finances{
+  margin-top: 440px;
+  text-align: center;
+}
+
+#invoicing and finances h2{
+  position: relative;
+  text-align: center;
+}
+
+.box-13{
+  background-color:#F2F9F1;
+  color:#fff;
+  /* same as above */
+  border: 2px #48946D solid;
+  border-radius: 10px;
+ 
+  /* same as above */
+  padding:20px;
+  width: 24%;
+
+  margin-top:50px;
+  margin:20px;
+  position:absolute;
+  top: 1000px;
+  left: 30px;
+}
+
+#wavelogo{
+  width: 85%;
+}
+
+.box-14{
+  background-color:#F2F9F1;
+  color:#fff;
+  /* same as above */
+  border: 2px #48946D solid;
+  border-radius: 10px;
+  
+  /* same as above */
+  padding:20px;
+  width: 24%;
+
+  margin-top:50px;
+  margin:20px;
+  position:absolute;
+  top: 1000px;
+  left: 500px;
+}
+
+#stripelogo{
+  width: 83%;
+}
+
+.box-15{
+  background-color:#F2F9F1;
+  color:#fff;
+  /* same as above */
+  border: 2px #48946D solid;
+  border-radius: 10px;
+ 
+  /* same as above */
+  padding:20px;
+  width: 24%;
+
+  margin-top:50px;
+  margin:20px;
+  position:absolute;
+  top: 1000px;
+  left: 970px;
+}
+
+#quickbookslogo{
+  width: 77%;
+}
+
+
+#sustainability-resources{
+  margin-top: 880px;
+  text-align: center;
+}
+
+#sustainability-resources h2{
+  position: relative;
+  text-align: center;
+  font-size: 45px;
+}
+
+.box-16{
+  background-color:#F2F9F1;
+  color:#fff;
+  /* same as above */
+  border: 2px #48946D solid;
+  border-radius: 10px;
+ 
+  /* same as above */
+  padding:20px;
+  width: 24%;
+
+  margin-top:50px;
+  margin:20px;
+  position:absolute;
+  top: 1500px;
+  left: 30px;
+}
+
+#sbalogo{
+  width: 84%;
+}
+
+.box-17{
+  background-color:#F2F9F1;
+  color:#fff;
+  /* same as above */
+  border: 2px #48946D solid;
+  border-radius: 10px;
+  
+  /* same as above */
+  padding:20px;
+  width: 24%;
+
+  margin-top:50px;
+  margin:20px;
+  position:absolute;
+  top: 1500px;
+  left: 500px;
+}
+
+#usepalogo{
+  width: 70%;
+}
+
+.box-18{
+  background-color:#F2F9F1;
+  color:#fff;
+  /* same as above */
+  border: 2px #48946D solid;
+  border-radius: 10px;
+ 
+  /* same as above */
+  padding:20px;
+  width: 24%;
+
+  margin-top:50px;
+  margin:20px;
+  position:absolute;
+  top: 1500px;
+  left: 970px;
+}
+
+#inhabitatlogo{
+  width: 70%;
+}

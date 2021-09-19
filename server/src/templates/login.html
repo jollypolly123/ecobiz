@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<section id="login">
+      <h1> Login to ECOBIZ. </h1>
+      
+
+      <label for="email" id="email-label">Email</label>
+      <br>
+      <input type="email" id="email" name="email" placeholder="name@example.com">
+
+      <br>
+      <br>
+      
+      <label for="password">Password</label>
+      <br>
+      <input type="text" id="password" name="password" placeholder="Enter Password">
+
+      <br>
+      <br>
+
+      <button>Login</button>
+
+      <br>
+
+      <p><a href="/forgotpassword">Forgot password?</a>          |         <a href="/register">Create an account.</a></p>
+      <a onclick="signIn()">
+            <img style="border:0" src="https://cdn.glitch.com/53a7a634-945e-4d08-a68d-eed09de32a3e%2Fbtn_google_signin_light_pressed_web%402x.png?v=1627430901319" alt="Google sign in" width="250">
+      </a>
+      </section>
+
+{% endblock %}

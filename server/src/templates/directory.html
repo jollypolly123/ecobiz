@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+      <section id="sustainable-directory">
+        <h1> The Sustainable Directory  </h1>
+        <p>Enter a network of freelancers and business owners<br>saving the planet, one sustainable service at a time.</p>
+        <form>
+          <button formaction="/postservices" class="button button8">Join the directory</button>
+        </form>
+      </section>
+
+      <section id="explore-directory">
+        <h2> Explore the Directory  </h2>
+        <input type="text" id="searchbar" name="searchbar" placeholder="Search">
+
+        <div id="search-container">
+        <input type="text" id="searchbar" name="searchbar" placeholder="Try keywords like 'UX Designer' or 'Marketer.'">
+        </div>
+
+        <button id="search-button">Search</button>
+        <div class="box-1">
+        <img src="/images/kaylaquinn.png" id="kaylaquinn">
+	      <h1>Kayla Quinn</h1>
+        <h1><strong>User Experience Designer</strong></h1>
+	      <p><a href="#">Email me!</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a> | <a href="#">Website</a></p>
+        </div>
+
+        <div class="box-2">
+        <img src="/images/randyschleifer.png" id="randyschleifer">
+	      <h1>Randy Schleifer</h1>
+        <h1><strong>User Experience Designer</strong></h1>
+	      <p><a href="#">Email me!</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a> | <a href="#">Website</a></p>
+        </div>
+
+        <div class="box-3">
+        <img src="/images/jordynstanton.png" id="jordynstanton">
+	      <h1>Jordyn Stanton</h1>
+        <h1><strong>User Experience Designer</strong></h1>
+	      <p><a href="#">Email me!</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a> | <a href="#">Website</a></p>
+        </div>
+
+        <div class="box-4">
+        <img src="/images/mirakenter.png" id="mirakenter">
+	      <h1>Mira Kenter</h1>
+        <h1><strong>User Experience Designer</strong></h1>
+	      <p><a href="#">Email me!</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a> | <a href="#">Website</a></p>
+        </div>
+
+        <div class="box-5">
+        <img src="/images/brandondorwart.png" id="brandondorwart">
+	      <h1>Brandon Dorwart</h1>
+        <h1><strong>User Experience Designer</strong></h1>
+	      <p><a href="#">Email me!</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a> | <a href="#">Website</a></p>
+        </div>
+
+        <div class="box-6">
+        <img src="/images/allisonsaris.png" id="allisonsaris">
+	      <h1>Allison Saris</h1>
+        <h1><strong>User Experience Designer</strong></h1>
+	      <p><a href="#">Email me!</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a> | <a href="#">Website</a></p>
+        </div>
+      </section>
+{% endblock %}

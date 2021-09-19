@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <section id="job-board">
+        <h1> The Eco-Job Board </h1>
+        <p>Enter a network of freelancers and business owners<br>saving the planet, one sustainable service at a time.</p>
+        <form>
+          <button formaction="/postjoblisting" class="button button9">Post a remote job</button>
+        </form>
+      </section>
+
+      <section id="explore-job-board">
+        <h2> Explore the remote job board  </h2>
+        
+        <div id="search-container">
+        <input type="text" id="searchbar" name="searchbar" placeholder="Try keywords like 'UX' or 'Marketing.'">
+        </div>
+
+        <button id="search-button">Search</button>
+     
+        <div class="box-1">
+        <img src="/images/PrescriptiveDataLogo.png" id="prescriptivedatalogo">
+	      <h1>Prescriptive Data</h1>
+        <h1><strong>User Experience Designer</strong></h1>
+	      <p><a href="#">Apply here!</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a> | <a href="#">Website</a></p>
+        </div>
+
+        <div class="box-2">
+        <img src="/images/smartersorting.png" id="smartersorting">
+	      <h1>Smarter Sorting</h1>
+        <h1><strong>User Experience Designer</strong></h1>
+	      <p><a href="#">Apply here!</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a> | <a href="#">Website</a></p>
+        </div>
+
+        <div class="box-3">
+        <img src="/images/sealed.png" id="sealed">
+	      <h1>Sealed</h1>
+        <h1><strong>User Experience Designer</strong></h1>
+	      <p><a href="#">Apply here!</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a> | <a href="#">Website</a></p>
+        </div>
+
+        <div class="box-4">
+        <img src="/images/sunday.png" id="sunday">
+	      <h1>Sunday</h1>
+        <h1><strong>User Experience Designer</strong></h1>
+	      <p><a href="#">Apply here!</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a> | <a href="#">Website</a></p>
+        </div>
+
+        <div class="box-5">
+        <img src="/images/weavegrid.png" id="weavegrid">
+	      <h1>WeaveGrid</h1>
+        <h1><strong>User Experience Designer</strong></h1>
+	      <p><a href="#">Apply here!</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a> | <a href="#">Website</a></p>
+        </div>
+
+        <div class="box-6">
+        <img src="/images/PrescriptiveDataLogo.png" id="prescriptivedatalogo">
+	      <h1>Prescriptive Data</h1>
+        <h1><strong>Frontend Web Developer</strong></h1>
+	      <p><a href="#">Apply here!</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a> | <a href="#">Website</a></p>
+        </div>
+
+      </section>
+{% endblock %}

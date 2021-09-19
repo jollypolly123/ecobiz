@@ -1,0 +1,23 @@
+{
+  "name": "ecobiz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jollypolly123/ecobiz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jollypolly123/ecobiz/issues"
+  },
+  "homepage": "https://github.com/jollypolly123/ecobiz#readme",
+  "devDependencies": {
+    "firebase-tools": "^9.18.0"
+  }
+}
