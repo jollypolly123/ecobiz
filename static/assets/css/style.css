@@ -333,7 +333,7 @@ button {
   text-align: center;
 }
 
-input[type=text], select {
+input[type=email], input[type="password"], input[type=text], select {
   width: 35%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -344,16 +344,6 @@ input[type=text], select {
   font-size: 20px;
 }
 
-input[type=email], select {
-  width: 35%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-sizing: border-box;
-  font-size: 20px;
-}
 label{
   font-size: 20px;
   text-align: center;
@@ -472,15 +462,28 @@ searchbar{
   top: 946px;
 }
 
+.box{
+  background-color:#F2F9F1;
+  color:#fff;
+  /* same as above */
+  border: 2px #48946D solid;
+  border-radius: 10px;
+
+  /* same as above */
+  padding:20px;
+  width: 24%;
+
+  margin-top:50px;
+  margin:20px;
+}
+
 .box-1{
   background-color:#F2F9F1;
   color:#fff;
   /* same as above */
   border: 2px #48946D solid;
   border-radius: 10px;
-  
 
- 
   /* same as above */
   padding:20px;
   width: 24%;

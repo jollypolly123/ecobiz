@@ -3,24 +3,24 @@
 {% block body %}
 <section id="login">
       <h1> Login to ECOBIZ. </h1>
-      
+      <form action="/login" method="POST">
+            <label for="email" id="email-label">Email</label>
+            <br>
+            <input type="email" id="email" name="email" placeholder="name@example.com">
 
-      <label for="email" id="email-label">Email</label>
-      <br>
-      <input type="email" id="email" name="email" placeholder="name@example.com">
+            <br>
+            <br>
 
-      <br>
-      <br>
-      
-      <label for="password">Password</label>
-      <br>
-      <input type="text" id="password" name="password" placeholder="Enter Password">
+            <label for="password">Password</label>
+            <br>
+            <input type="password" id="password" name="password" placeholder="Enter Password">
 
-      <br>
-      <br>
+            <br>
+            {{ error }}
+            <br>
 
-      <button>Login</button>
-
+            <button type="submit">Login</button>
+      </form>
       <br>
 
       <p><a href="/forgotpassword">Forgot password?</a>          |         <a href="/register">Create an account.</a></p>

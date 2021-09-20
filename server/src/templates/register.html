@@ -3,27 +3,28 @@
 {% block body %}
 <section id="login">
       <h1> Let's create your account. </h1>
-      
+      <form action="/register" method="POST">
+            <label for="email">Email</label>
+            <br>
+            <input type="email" id="email" name="email" placeholder="name@example.com"
+                   {% if email %} value="{{ email }}" {% endif %}>
 
-      <label for="email">Email</label>
-      <br>
-      <input type="email" id="email" name="email" placeholder="name@example.com">
+            <br>
+            <br>
 
-      <br>
-      <br>
-      
-      <label for="password">Password</label>
-      <br>
-      <input type="text" id="password" name="password" placeholder="Enter Password">
+            <label for="password">Password</label>
+            <br>
+            <input type="password" id="password" name="password" placeholder="Enter Password">
 
-      <br>
-      <br>
+            <br>
+            {{ error }}
+            <br>
 
-      <button>Register</button>
-
+            <button type="submit">Register</button>
+      </form>
       <br>
 
       <p>Already have an account? <a href="/login">Sign in.</a></p>
-      </section>
+</section>
 
 {% endblock %}

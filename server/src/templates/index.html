@@ -4,6 +4,7 @@
     <section id="landing">
       <div class="container">
         <h1>The eco-friendly way to <br> monetize your passions.</h1>
+        {{ req }}
         <p>Join a network of freelancers and businesses saving <br> the planet, one sustainable service at a time.</p>
         <form>
           <button formaction="#eco-freelancers" class="button button1">For Eco-Freelancers</button>
@@ -25,7 +26,7 @@
         <br>
         Make a change by promoting your services <br> or applying to jobs today!</p>
         <form>
-          <button formaction="/directory" class="button button3">Promote your services</button>
+          <button formaction="/postservices" class="button button3">Promote your services</button>
           <button formaction="/jobs" class=" button button4">Apply for jobs</button>
         </form>
         <img src="/images/ecofreelancerslanding.png" id="ecofreelancerslanding" align="right">
@@ -41,7 +42,7 @@
         <br>
         Make a change by posting a job listing or<br> hiring a freelancer today!</p>
         <form>
-          <button formaction="/jobs" class="button button5">Post a job listing</button>
+          <button formaction="/postjoblisting" class="button button5">Post a job listing</button>
           <button formaction="/directory" class=" button button6">Hire a freelancer</button>
         </form>
         <img src="/images/ecobusinesseslanding.png" id="ecobusinesseslanding" align="right">

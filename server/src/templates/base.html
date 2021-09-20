@@ -20,7 +20,11 @@
         <li><a href="/directory">Directory</a></li>
         <li><a href="/jobs">Jobs</a></li>
         <li><a href="/resources">Resources</a></li>
+        {% if user %}
+        <li><a href="/logout">Logout</a></li>
+        {% else %}
         <li><a href="/login">Login</a></li>
+        {% endif %}
       </ul>
       </div>
     </div>
@@ -66,26 +70,3 @@
 <!--			<script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>-->
 <!--			<script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>-->
 <!--			<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>-->
-<!--			<script type="module">-->
-<!--			  // Import the functions you need from the SDKs you need-->
-<!--			  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";-->
-<!--			  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-analytics.js";-->
-<!--			  // TODO: Add SDKs for Firebase products that you want to use-->
-<!--			  // https://firebase.google.com/docs/web/setup#available-libraries-->
-
-<!--			  // Your web app's Firebase configuration-->
-<!--			  // For Firebase JS SDK v7.20.0 and later, measurementId is optional-->
-<!--			  const firebaseConfig = {-->
-<!--				apiKey: "AIzaSyC3-64_FCq0MTfkz1yZxPgiMg6FjekjsyQ",-->
-<!--				authDomain: "ecobiz-com.firebaseapp.com",-->
-<!--				projectId: "ecobiz-com",-->
-<!--				storageBucket: "ecobiz-com.appspot.com",-->
-<!--				messagingSenderId: "530286252060",-->
-<!--				appId: "1:530286252060:web:febfb512972936c9d94fd9",-->
-<!--				measurementId: "G-KY5ZQDXGFB"-->
-<!--			  };-->
-
-<!--			  // Initialize Firebase-->
-<!--			  const app = initializeApp(firebaseConfig);-->
-<!--			  const analytics = getAnalytics(app);-->
-<!--			</script>-->

@@ -5,7 +5,7 @@
         <h1> The Eco-Job Board </h1>
         <p>Enter a network of freelancers and business owners<br>saving the planet, one sustainable service at a time.</p>
         <form>
-          <button formaction="/postjoblisting" class="button button9">Post a remote job</button>
+          <button onclick="location.href='/postjoblisting'" type="button" class="button button9">Post a remote job</button>
         </form>
       </section>
 
@@ -17,7 +17,23 @@
         </div>
 
         <button id="search-button">Search</button>
-     
+        <table>
+            <tbody>
+            {% for job_row in jobs_list %}
+                <tr>
+                {% for job in job_row %}
+                    <td class="box">
+                        <img src="/images/PrescriptiveDataLogo.png" id="prescriptivedatalogo">
+                        <h1>{{ job.company }}</h1>
+                        <h1><strong>{{ job.title }}</strong></h1>
+                        <p><a href="{{ job.application }}">Apply here!</a> | <a href="{{ job.instagram }}">Instagram</a> | <a href="{{ job.linkedin }}">LinkedIn</a> | <a href="{{ job.website }}">Website</a></p>
+                    </td>
+                {% endfor %}
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
         <div class="box-1">
         <img src="/images/PrescriptiveDataLogo.png" id="prescriptivedatalogo">
 	      <h1>Prescriptive Data</h1>
