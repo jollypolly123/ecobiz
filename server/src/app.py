@@ -1,10 +1,8 @@
-from flask import Flask, render_template, request, redirect, session, url_for, jsonify, make_response
-from firebase_admin import credentials, firestore, initialize_app
+from flask import Flask, render_template, request, redirect, session
+from firebase_admin import credentials, initialize_app
 from functools import wraps
 import os
 import pyrebase
-import json
-import time
 
 app = Flask(__name__, static_folder='')
 app.config['SESSION_TYPE'] = 'memcached'
@@ -57,10 +55,11 @@ def directory():
     service_list = []
     service_row = []
     for service in services:
-        service_row.append(service)
+        service_row.append(services[service])
         if len(service_row) == 3:
             service_list.append(service_row)
             service_row = []
+    service_list.append(service_row)
     return render_template('directory.html', service_list=service_list)
 
 
@@ -69,11 +68,12 @@ def jobs():
     job_listings = db.child("joblistings").get().val()
     jobs_list = []
     jobs_row = []
-    for service in job_listings:
-        jobs_row.append(service)
+    for job in job_listings:
+        jobs_row.append(job_listings[job])
         if len(jobs_row) == 3:
             jobs_list.append(jobs_row)
             jobs_row = []
+    jobs_list.append(jobs_row)
     return render_template('jobs.html', jobs_list=jobs_list)
 
 
@@ -143,6 +143,7 @@ def postjoblisting():
         linkedin = request.form.get('linkedin', "No LinkedIn")
         instagram = request.form.get('instagram', "No Instagram")
         application = request.form.get('application', "No application")
+        img = request.form.get('img', '/images/weavegrid.png')
         data = {
             "application": application,
             "company": company,
@@ -151,7 +152,8 @@ def postjoblisting():
             "website": website,
             "linkedin": linkedin,
             "instagram": instagram,
-            "skills_needed": skills_needed
+            "skills_needed": skills_needed,
+            "img": img
         }
         try:
             db.child("joblistings").push(data)
@@ -172,6 +174,7 @@ def postservices():
         website = request.form.get('website', "No website")
         linkedin = request.form.get('linkedin', "No LinkedIn")
         instagram = request.form.get('instagram', "No Instagram")
+        img = request.form.get('img', '/images/randyschleifer.png')
         data = {
             "full_name": full_name,
             "jobTitle": jobTitle,
@@ -179,7 +182,8 @@ def postservices():
             "website": website,
             "linkedin": linkedin,
             "instagram": instagram,
-            "bio": bio
+            "bio": bio,
+            "img": img
         }
         try:
             db.child("joblistings").push(data)

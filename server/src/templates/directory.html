@@ -19,19 +19,18 @@
         </div>
 
         <button id="search-button">Search</button>
-        <div class="box-1">
-        <img src="/images/kaylaquinn.png" id="kaylaquinn">
-	      <h1>Kayla Quinn</h1>
-        <h1><strong>User Experience Designer</strong></h1>
-	      <p><a href="#">Email me!</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a> | <a href="#">Website</a></p>
-        </div>
 
-        <div class="box-2">
-        <img src="/images/randyschleifer.png" id="randyschleifer">
-	      <h1>Randy Schleifer</h1>
-        <h1><strong>User Experience Designer</strong></h1>
-	      <p><a href="#">Email me!</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a> | <a href="#">Website</a></p>
-        </div>
+
+        {% for service_row in service_list %}
+            {% for service in service_row %}
+                <div class="box-{{ loop.index }}">
+                    <img src="{{ service.img }}" id="person">
+                    <h1>{{ service.full_name }}</h1>
+                    <h1><strong>{{ service.jobTitle }}</strong></h1>
+                    <p><a href="{{ service.application }}">Email me!</a> | <a href="{{ service.instagram }}">Instagram</a> | <a href="{{ service.linkedin }}">LinkedIn</a> | <a href="{{ service.website }}">Website</a></p>
+                </div>
+            {% endfor %}
+        {% endfor %}
 
         <div class="box-3">
         <img src="/images/jordynstanton.png" id="jordynstanton">

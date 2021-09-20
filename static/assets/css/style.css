@@ -477,6 +477,10 @@ searchbar{
   margin:20px;
 }
 
+td {
+    padding: 0 15px;
+}
+
 .box-1{
   background-color:#F2F9F1;
   color:#fff;
@@ -501,9 +505,7 @@ searchbar{
   /* same as above */
   border: 2px #48946D solid;
   border-radius: 10px;
-  
 
- 
   /* same as above */
   padding:20px;
   width: 24%;
@@ -591,14 +593,20 @@ searchbar{
   left: 925px;
 }
 
+table.center {
+    width:80%;
+    margin-left:10%;
+    margin-right:10%;
+}
 
 #explore-job-board{
   height:1000px;
-  
+  text-align: center;
 }
 
 #explore-directory{
   height:1000px;
+  text-align: center;
 }
 
 /* resources page */
